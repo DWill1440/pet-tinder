@@ -10,6 +10,15 @@ h1 {
     height: 150px !important;
     max-width: 100% !important;
 }
+.inputs {
+    background-color: #009688;
+    padding-bottom: 20px !important;
+}
+
+label{
+    font-size: 15px !important;
+    color: white !important;
+}
 h3 {
     color: white;
     font-size: 20px !important;
@@ -19,12 +28,12 @@ h3 {
     color: white !important;
     font-size: 15px !important;
 }
-.card {
-    height: 300px !important;
-    margin-left: 20px !important;
+p { 
+    color: white;
 }
-.pet {
-    margin-right: 100px !important;
+.card {
+    height: 350px !important;
+    margin-left: 20px !important;
 }
 
 .btn {
@@ -43,6 +52,8 @@ h3 {
  }
  h2 {
      padding: 20px 0 0 20px;
+     color: white;
+     font-size: 40px;
  }
  .card-style {
      margin: 10px !important;
@@ -51,7 +62,7 @@ h3 {
  }
  .margin {
      margin-right: 40px;
-     background-color: rgb(0, 26, 255);
+     background-color: #0097a7;
      padding: 10px;
  }
  .bajo {

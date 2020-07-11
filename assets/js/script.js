@@ -4,83 +4,84 @@ var addTempEl = document.getElementById('temp');
 var rowEl = document.getElementById('card-row');
 var forecastTitelEl = document.getElementById('forecast');
 var cardDayEl = document.getElementById('daycards');
+var weatherEl = document.getElementById('weather-info');
 // the next line and function set up the button in our html to be clickable and reactive 
 document.addEventListener('DOMContentLoaded', bindButtons);
 
-function bindButtons(){
-	document.getElementById('submitZip').addEventListener('click', function(event){
-		event.preventDefault();
-		var zip = document.getElementById('zip').value; // this line gets the zip code from the form entry
-		var size = document.getElementById('size').value;
-		var age = document.getElementById('age').value;
-		var sex = document.getElementById('sex').value;
-		var url = 'https://api.petfinder.com/pet.find';
-		
-		// Within $.ajax{...} is where we fill out our query 
-		$.ajax({
-			url: url,
-			jsonp: "callback",
-			dataType: "jsonp",
-			data: {
-				count: 1,
-				size: size,
-				age: age,
-				sex: sex,
-				key: apiKey,
-				animal: 'dog',
-				'location': zip,
-				output: 'basic',
-				format: 'json'
-			},
-			// Here is where we handle the response we got back from Petfinder
-			success: function( response ) {
-				rowEl.innerHTML = '';
-				var pet = response.petfinder.pets.pet;
-				var dogName = pet.name.$t;
-				var img = './assets/img/logo.png';
-				if (pet.media.photos && pet.media.photos.photo[3]) {
-					img = pet.media.photos.photo[3].$t;
-				}
-				var id = pet.id.$t;
-				var breed = pet.breeds.breed.$t;
-				var city = pet.contact.city.$t;
-				getCity(city);
+function bindButtons() {
+    document.getElementById('submitZip').addEventListener('click', function (event) {
+        event.preventDefault();
+        var zip = document.getElementById('zip').value; // this line gets the zip code from the form entry
+        var size = document.getElementById('size').value;
+        var age = document.getElementById('age').value;
+        var sex = document.getElementById('sex').value;
+        var url = 'https://api.petfinder.com/pet.find';
+
+        // Within $.ajax{...} is where we fill out our query 
+        $.ajax({
+            url: url,
+            jsonp: "callback",
+            dataType: "jsonp",
+            data: {
+                count: 1,
+                size: size,
+                age: age,
+                sex: sex,
+                key: apiKey,
+                animal: 'dog',
+                'location': zip,
+                output: 'basic',
+                format: 'json'
+            },
+            // Here is where we handle the response we got back from Petfinder
+            success: function (response) {
+                rowEl.innerHTML = '';
+                var pet = response.petfinder.pets.pet;
+                var dogName = pet.name.$t;
+                var img = './assets/img/logo.png';
+                if (pet.media.photos && pet.media.photos.photo[3]) {
+                    img = pet.media.photos.photo[3].$t;
+                }
+                var id = pet.id.$t;
+                var breed = pet.breeds.breed.$t;
+                var city = pet.contact.city.$t;
+                getCity(city);
 
                 var newName = document.createElement('h3');
-                newName.setAttribute('class','card-title');
-				newName.textContent = dogName;
-				var breedEl = document.createElement('p');
-				breedEl.setAttribute('class','p2');
-				breedEl.textContent = breed;
-                
-                
+                newName.setAttribute('class', 'card-title');
+                newName.textContent = dogName;
+                var breedEl = document.createElement('p');
+                breedEl.setAttribute('class', 'p2');
+                breedEl.textContent = breed;
+
+
                 var divCol = document.createElement('div');
-				divCol.setAttribute('class','pet col s3');
-				divCol.setAttribute('id','dog-img');
+                divCol.setAttribute('class', 'pet col s3');
+                divCol.setAttribute('id', 'dog-img');
                 var divCard = document.createElement('div');
-                divCard.setAttribute('class','card blue-grey darken-1');
+                divCard.setAttribute('class', 'card cyan darken-2');
                 var divImg = document.createElement('div');
-                divImg.setAttribute('class','card-image');
+                divImg.setAttribute('class', 'card-image');
                 var divInfo = document.createElement('div');
-                divInfo.setAttribute('class','card-content');
+                divInfo.setAttribute('class', 'card-content');
                 var divLink = document.createElement('div');
-                divLink.setAttribute('class','card-action');
+                divLink.setAttribute('class', 'card-action');
                 var linkEl = document.createElement('a');
                 linkEl.textContent = 'Adopt me!';
                 linkEl.href = 'https://www.petfinder.com/petdetail/' + id;
                 linkEl.target = '_blank';
 
 
-				var newImg = document.createElement('img');
-				newImg.setAttribute('class','dog-img');
-				newImg.src = img;
-				
-				// var rowEl = document.getElementById('card-row');
-                
-                
+                var newImg = document.createElement('img');
+                newImg.setAttribute('class', 'dog-img');
+                newImg.src = img;
+
+                // var rowEl = document.getElementById('card-row');
+
+
                 divImg.appendChild(newImg);
-				divInfo.appendChild(newName);
-				divInfo.appendChild(breedEl);
+                divInfo.appendChild(newName);
+                divInfo.appendChild(breedEl);
                 rowEl.appendChild(divCol);
                 divCol.appendChild(divCard);
                 divCard.appendChild(divImg);
@@ -88,10 +89,10 @@ function bindButtons(){
                 divCard.appendChild(divLink);
                 divLink.appendChild(linkEl);
 
-				
-			}
-		});
-		})
+
+            }
+        });
+    })
 
 }
 
@@ -104,8 +105,8 @@ var getCity = function (city) {
         .then(function (response) {
             // request was successful
             if (response.ok) {
-                cardWeatherEl.innerHTML = '';
-                addTempEl.innerHTML = '';
+                weatherEl.innerHTML = '';
+                // addTempEl.innerHTML = '';
                 response.json().then(function (data) {
                     // console.log(data)
                     displayWeather(data);
@@ -131,6 +132,24 @@ var getCity = function (city) {
 };
 // function to creted the display weather for today
 var displayWeather = function (data) {
+
+    var weatherInfo = document.createElement('div');
+    weatherInfo.setAttribute('class', 'card col s5 cyan darken-2');
+    weatherInfo.setAttribute('id', 'weather-conteiner');
+    weatherEl.appendChild(weatherInfo);
+
+    var infoEl = document.getElementById('weather-conteiner');
+
+    var cardInfo = document.createElement('div');
+    cardInfo.setAttribute('id', 'weather-card');
+    infoEl.appendChild(cardInfo);
+
+    var tempInfo = document.createElement('ul');
+    tempInfo.setAttribute('id', 'temp');
+    infoEl.appendChild(tempInfo);
+
+    var cardWeatherEl = document.getElementById("weather-card");
+    var addTempEl = document.getElementById('temp');
 
     var iconEl = document.createElement('img');
     iconEl.className = 'img-icon';
