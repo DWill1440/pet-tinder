@@ -61,7 +61,7 @@ function bindButtons() {
                 divCol.setAttribute('class', 'pet col s3');
                 divCol.setAttribute('id', 'dog-img');
                 var divCard = document.createElement('div');
-                divCard.setAttribute('class', 'card medium cyan darken-2');
+                divCard.setAttribute('class', 'card medium teal darken-1');
                 var divImg = document.createElement('div');
                 divImg.setAttribute('class', 'card-image waves-effect waves-block waves-light');
                 var divInfo = document.createElement('div');
@@ -136,7 +136,7 @@ var getCity = function (city) {
 var displayWeather = function (data) {
 
     var weatherInfo = document.createElement('div');
-    weatherInfo.setAttribute('class', 'card medium col s5 cyan darken-2');
+    weatherInfo.setAttribute('class', 'card medium col s5 teal darken-1');
     weatherInfo.setAttribute('id', 'weather-conteiner');
     weatherEl.appendChild(weatherInfo);
 
@@ -217,7 +217,7 @@ var displayWeather = function (data) {
 // function to creted the display weather for 5 days
 var getForecast = function (data) {
     // console.log(data)
-    var titleForecastEl = document.createElement('h2');
+    var titleForecastEl = document.createElement('h3');
     titleForecastEl.textContent = '5-Day Forecast:';
 
     for (var i = 5; i < data.list.length; i = i + 8) {
