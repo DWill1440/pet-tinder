@@ -42,7 +42,10 @@ p {
     color: white;
 }
 .card {
-    border-radius: 15px !important; 
+    border-radius: 15px !important;
+    box-shadow: 0 0 10px rgb(243, 243, 243);
+    color: var(#546e7a);
+    border: solid 6px var(#546e7a); 
 }
 
 .btn {
@@ -67,13 +70,14 @@ h3 {
  }
  .card-style {
      margin: 10px !important;
-     width: 15% !important;
+     width: 18% !important;
      height: 230px !important;
+     border-radius: 15px !important; 
  }
  .margin {
      margin-right: 40px;
      background-color: #00897b;
-     padding: 10px;
+     padding-right: 0px !important;
  }
  .bajo {
      padding: 5px;

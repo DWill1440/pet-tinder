@@ -47,14 +47,22 @@ function bindButtons() {
                 var id = pet.id.$t;
                 var breed = pet.breeds.breed.$t;
                 var city = pet.contact.city.$t;
+                var age = pet.age.$t;
+                var sex = pet.sex.$t;
                 getCity(city);
 
                 var newName = document.createElement('h3');
                 newName.setAttribute('class', 'card-title');
-                newName.textContent = dogName;
+                newName.textContent = 'Name: '+ dogName;
                 var breedEl = document.createElement('p');
                 breedEl.setAttribute('class', 'p2');
-                breedEl.textContent = breed;
+                breedEl.textContent = 'Breed: '+ breed;
+                var ageEl = document.createElement('p');
+                ageEl.setAttribute('class', 'p2');
+                ageEl.textContent = 'Age: '+ age;
+                var sexEl = document.createElement('p');
+                sexEl.setAttribute('class', 'p2');
+                sexEl.textContent = 'Gender: '+ sex;
 
 
                 var divCol = document.createElement('div');
@@ -84,6 +92,8 @@ function bindButtons() {
                 divImg.appendChild(newImg);
                 divInfo.appendChild(newName);
                 divInfo.appendChild(breedEl);
+                divInfo.appendChild(ageEl);
+                divInfo.appendChild(sexEl);
                 rowEl.appendChild(divCol);
                 divCol.appendChild(divCard);
                 divCard.appendChild(divImg);
@@ -136,7 +146,7 @@ var getCity = function (city) {
 var displayWeather = function (data) {
 
     var weatherInfo = document.createElement('div');
-    weatherInfo.setAttribute('class', 'card medium col s5 teal darken-1');
+    weatherInfo.setAttribute('class', 'card medium col s6 teal darken-1');
     weatherInfo.setAttribute('id', 'weather-conteiner');
     weatherEl.appendChild(weatherInfo);
 
@@ -223,7 +233,7 @@ var getForecast = function (data) {
     for (var i = 5; i < data.list.length; i = i + 8) {
 
         var foreCardEl = document.createElement('li');
-        foreCardEl.className = 'card col s1 list-group-item margin card-style';
+        foreCardEl.className = 'card col s2 list-group-item margin card-style';
         // list-group-item-primary
         cardDayEl.appendChild(foreCardEl);
 
