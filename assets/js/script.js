@@ -5,6 +5,8 @@ var rowEl = document.getElementById('card-row');
 var forecastTitelEl = document.getElementById('forecast');
 var cardDayEl = document.getElementById('daycards');
 var weatherEl = document.getElementById('weather-info');
+
+
 // the next line and function set up the button in our html to be clickable and reactive 
 document.addEventListener('DOMContentLoaded', bindButtons);
 
@@ -59,9 +61,9 @@ function bindButtons() {
                 divCol.setAttribute('class', 'pet col s3');
                 divCol.setAttribute('id', 'dog-img');
                 var divCard = document.createElement('div');
-                divCard.setAttribute('class', 'card cyan darken-2');
+                divCard.setAttribute('class', 'card medium cyan darken-2');
                 var divImg = document.createElement('div');
-                divImg.setAttribute('class', 'card-image');
+                divImg.setAttribute('class', 'card-image waves-effect waves-block waves-light');
                 var divInfo = document.createElement('div');
                 divInfo.setAttribute('class', 'card-content');
                 var divLink = document.createElement('div');
@@ -73,7 +75,7 @@ function bindButtons() {
 
 
                 var newImg = document.createElement('img');
-                newImg.setAttribute('class', 'dog-img');
+                newImg.setAttribute('class', 'activator dog-img');
                 newImg.src = img;
 
                 // var rowEl = document.getElementById('card-row');
@@ -134,7 +136,7 @@ var getCity = function (city) {
 var displayWeather = function (data) {
 
     var weatherInfo = document.createElement('div');
-    weatherInfo.setAttribute('class', 'card col s5 cyan darken-2');
+    weatherInfo.setAttribute('class', 'card medium col s5 cyan darken-2');
     weatherInfo.setAttribute('id', 'weather-conteiner');
     weatherEl.appendChild(weatherInfo);
 

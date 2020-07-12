@@ -10,10 +10,20 @@ h1 {
     height: 150px !important;
     max-width: 100% !important;
 }
-.inputs {
+.form-group {
+    box-shadow: 0 0 10px rgb(243, 243, 243);
+    border-radius: 15px;
+    background-color: rgba(56, 252, 121, 0.589);
+    padding: 20px;
+    color: var(#546e7a);
+    border: solid 6px var(#546e7a);
+    width: 80%;
+    margin: 3.5%;
+}
+/* .inputs {
     background-color: #009688;
     padding-bottom: 20px !important;
-}
+} */
 
 label{
     font-size: 15px !important;
@@ -31,10 +41,10 @@ h3 {
 p { 
     color: white;
 }
-.card {
+/* .card {
     height: 350px !important;
     margin-left: 20px !important;
-}
+} */
 
 .btn {
     margin-top: 15px;
