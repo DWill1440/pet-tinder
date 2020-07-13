@@ -10,20 +10,42 @@ h1 {
     height: 150px !important;
     max-width: 100% !important;
 }
+.form-group {
+    box-shadow: 0 0 10px rgb(243, 243, 243);
+    border-radius: 15px;
+    background-color: rgba(56, 252, 121, 0.589);
+    padding: 20px;
+    color: var(#546e7a);
+    border: solid 6px var(#546e7a);
+    width: 80%;
+    margin: 3.5%;
+}
+/* .inputs {
+    background-color: #009688;
+    padding-bottom: 20px !important;
+} */
+
+label{
+    font-size: 15px !important;
+    color: white !important;
+}
 h3 {
     color: white;
-    font-size: 15px !important;
+    font-size: 20px !important;
+    font-weight: bold;
 }
 .p2 {
     color: white !important;
     font-size: 15px !important;
 }
-.card {
-    height: 400px !important;
-    margin-left: 20px !important;
+p { 
+    color: white;
 }
-.pet {
-    margin-right: 100px !important;
+.card {
+    border-radius: 15px !important;
+    box-shadow: 0 0 10px rgb(243, 243, 243);
+    color: var(#546e7a);
+    border: solid 6px var(#546e7a); 
 }
 
 .btn {
@@ -42,16 +64,20 @@ h3 {
  }
  h2 {
      padding: 20px 0 0 20px;
+     color: white;
+     font-size: 40px;
+     text-align: center;
  }
  .card-style {
      margin: 10px !important;
-     width: 15% !important;
-     height: 210px !important;
+     width: 18% !important;
+     height: 230px !important;
+     border-radius: 15px !important; 
  }
  .margin {
      margin-right: 40px;
-     background-color: rgb(0, 26, 255);
-     padding: 10px;
+     background-color: #00897b;
+     padding-right: 0px !important;
  }
  .bajo {
      padding: 5px;
