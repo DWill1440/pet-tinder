@@ -10,10 +10,12 @@
     type="image/icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body
+  style="background-image: url('https://n6-img-fp.akamaized.net/free-vector/bons-and-foot-prints-pattern-background_1374-18.jpg?size=338&ext=jpg'); ">
   <header class="card-panel teal darken-2">
     <div>
       <h1><i class="icon large material-icons">pets</i>Pet Tinder<i class="icon large material-icons">pets</i></h1>
@@ -21,12 +23,12 @@
   </header>
 
   <div class="row">
-    <div class="col s4" id="pet-form">
+    <div class="inputs col s4" id="pet-form">
       <div class="form-group">
-        <label>Zip</label>
+        <label>Zip Code</label>
         <input type="text" id="zip" class="form-control form-control-lg" placeholder="Enter your zipcode">
 
-        <label>Would you prefer a small, medium, or large dog?</label>
+        <label>Size</label>
         <select id="size" class="browser-default">
           <option value="" disabled selected>Choose your option</option>
           <option value="S">Small</option>
@@ -43,7 +45,7 @@
           <option value="Senior">Senior</option>
         </select>
 
-        <label>Genered</label>
+        <label>Gender</label>
         <select id="sex" class="browser-default">
           <option value="" disabled selected>Choose your option</option>
           <option value="M">Male</option>
@@ -66,7 +68,8 @@
 
 
 
-        <input type="submit" value="Search" id="submitZip" class="btn btn-dark btn-lg btn-block mt-3 darken-2">
+        <input type="submit" value="Search" id="submitZip"
+          class="btn btn-dark btn-lg btn-block mt-3  blue-grey darken-1">
       </div>
     </div>
 
@@ -76,9 +79,11 @@
 
 
         </div>
-        <div class="card col s7">
-          <div id="weather-card"></div>
-          <ul id="temp"></ul>
+        <div id="weather-info">
+          <!-- <div class="card col s5 cyan darken-2">
+            <div id="weather-card"></div>
+            <ul id="temp"></ul>
+          </div> -->
         </div>
       </div>
       <div class="row">
@@ -87,6 +92,32 @@
       </div>
     </div>
   </div>
+  <footer class="page-footer teal darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Made with ❤️ by</h5>
+          <!-- <p class="grey-text text-lighten-4">DeMario Williams | Ryan Vincent | Jack Hoover | Nicolas Esquivel | Drew Van</p> -->
+          
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text"><i class="fa fa-github" style="font-size:48px;color:white"></i></h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/NIKO09ES" target="_blank">Nicolas Esquivel</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/DWill1440" target="_blank">DeMario Williams</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/DVanEman" target="_blank">Andrew Van Eman</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/Ryan13091" target="_blank">Ryan Vincent</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/jhoover1077" target="_blank">Jack Hoover</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Pet Tinder
+      </div>
+    </div>
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
