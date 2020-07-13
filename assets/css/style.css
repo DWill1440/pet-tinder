@@ -400,8 +400,53 @@ h3 {
       width: 95%;
     }
   
-    .flex-row {
-      margin: 25px auto;
+    .form-group {
+        width: 100%;
+    }
+
+    .row .col.s4 {
+        width: 92%;
+        margin: auto;
+    }
+
+    .row .col.s8 {
+        justify-content: center;
+        width: 92%;
+        margin: auto;
+    }
+
+    .row .col.s3 {
+        width: 92%;
+        margin: auto;
+        float: none;
+    }
+
+    .card {
+        border-radius: 15px !important;
+    }
+    
+    .row .col.s6 {
+        width: 92%;
+        margin: auto;
+        float: none;
+    }
+
+    .card-style {
+      width: 42% !important;
+      margin-left: 4vw !important;
+    }
+    
+    header h1 {
+        font-size: 13vw;
+    }
+
+    i.large {
+        font-size: 1.5rm;
+        width: 100%;
+    }
+
+    h3 {
+        margin-left: 4vw;
     }
   
     .hero-subtitle {
