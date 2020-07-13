@@ -1,5 +1,5 @@
 # pet-tinder
-![image](https://user-images.githubusercontent.com/64138572/86987815-87570300-c15c-11ea-92a0-fbd7cc9b4546.png)
+![image](https://user-images.githubusercontent.com/64138572/87261993-ff376d00-c47d-11ea-8965-8aa4e0b4a7af.png)
 
 
 ## Purpose
@@ -19,4 +19,4 @@ A website that allows users to search for a new pet in need of a home. The user 
 https://dwill1440.github.io/pet-tinder/
 
 ## Contribution
-Made with ❤️ by DeMario Williams | Ryan Vincent | Jack Hoover  | Nicolas Esquivel Ruiz | Drew Van eman
+Made with ❤️ by DeMario Williams | Ryan Vincent | Jack Hoover  | Nicolas Esquivel Ruiz | Drew Van Eman
